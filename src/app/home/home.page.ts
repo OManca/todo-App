@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,22 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public AlertController: AlertController) {}
+
+  openTodoAlert(){
+    let todoAlert = this.AlertController.create({
+      message: "Votre tache",
+      buttons: [
+        {
+          text: "Annuler",
+          name: "todoAlert"
+        },
+        {
+          text: "Supprimer"
+        }
+      ]
+    });
+  }
+
 
 }

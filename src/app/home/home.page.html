@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Todo App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" padding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-row>
+      <ion-item>Acheter un cadeau</ion-item>
+      <button ion-buttton (click)="openTodoAlert">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-row>
+    <ion-row>
+      <ion-item>Emballer le cadeau</ion-item>
+        <button color="danger" ion-buttton (click)="openTodoAlert">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-row>
+      <ion-row>
+      <ion-item>Offrir le cadeau</ion-item>
+      <button color="danger" ion-button (click)="openTodoAlert">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-row>
+    <ion-row>
+      <ion-item>Jeter le cadeau</ion-item>
+      <button color="danger" ion-buttton (click)="openTodoAlert">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-row>
+  </ion-list>
 </ion-content>

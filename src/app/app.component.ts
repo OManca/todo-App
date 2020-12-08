@@ -24,4 +24,15 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  public selectedIndex = 0;
+  public appPages = [
+    {
+      title: 'Home',
+      url: '/',
+      icon: 'folder-open',
+    },
+  ];
+  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
 }
