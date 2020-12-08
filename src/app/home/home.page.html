@@ -1,37 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Todo App
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content [fullscreen]="true" padding>
-
-  <ion-list>
-    <ion-row>
-      <ion-item>Acheter un cadeau</ion-item>
-      <button ion-buttton (click)="openTodoAlert">
-        <ion-icon name="trash"></ion-icon>
-      </button>
-    </ion-row>
-    <ion-row>
-      <ion-item>Emballer le cadeau</ion-item>
-        <button color="danger" ion-buttton (click)="openTodoAlert">
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Blank</ion-title>
+      </ion-toolbar>
+    </ion-header>
+      <h2 class="main-title">Vous devez finir les tâches ci-desous</h2>
+      <ion-list>
+        <ion-item class="content_items">
+          <ion-checkbox class="checkbox" id="task1" name="task1"></ion-checkbox>
+          <ion-label class="test" for="task1"
+            >Réunion avec les lutins</ion-label
+          >
+          <ion-button (click)="displayAlert()"
+            ><ion-icon  name="trash"></ion-icon
+          ></ion-button>
+        </ion-item>
+        <ion-item class="content_items">
+          <ion-checkbox class="checkbox" id="task2" name="task2"></ion-checkbox>
+          <ion-label for="task2">Vérification de l'usine de cadeaux</ion-label>
           <ion-icon name="trash"></ion-icon>
-        </button>
-      </ion-row>
-      <ion-row>
-      <ion-item>Offrir le cadeau</ion-item>
-      <button color="danger" ion-button (click)="openTodoAlert">
-        <ion-icon name="trash"></ion-icon>
-      </button>
-    </ion-row>
-    <ion-row>
-      <ion-item>Jeter le cadeau</ion-item>
-      <button color="danger" ion-buttton (click)="openTodoAlert">
-        <ion-icon name="trash"></ion-icon>
-      </button>
-    </ion-row>
-  </ion-list>
+        </ion-item>
+        <ion-item class="content_items">
+          <ion-checkbox class="checkbox" id="prun" name="prun"></ion-checkbox>
+          <ion-label for="prun" class="content"
+            >Vérifier l'attelage des rennes</ion-label
+          >
+          <ion-icon name="trash"></ion-icon>
+        </ion-item>
+        <ion-item class="content_items">
+          <ion-checkbox class="checkbox" id="wash" name="wash"></ion-checkbox>
+          <ion-label for="wash" class="content"
+            >Contrôle technique du traineau</ion-label
+          >
+          <ion-icon name="trash"></ion-icon>
+        </ion-item>
+      </ion-list>
+  </ion-content>
 </ion-content>

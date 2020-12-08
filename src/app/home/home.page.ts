@@ -1,30 +1,23 @@
-import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-
-
+import { Component } from "@angular/core";
+import { AlertController } from "@ionic/angular";
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: "app-home",
+  templateUrl: "home.page.html",
+  styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-
-  constructor(public AlertController: AlertController) {}
-
-  openTodoAlert(){
-    let todoAlert = this.AlertController.create({
-      message: "Votre tache",
+  constructor(private alertController: AlertController) {}
+  greyText() {}
+  async displayAlert() {
+    const addToDoAlert = await this.alertController.create({
+      message: "Voulez-vous supprimer la tâche ?",
       buttons: [
         {
-          text: "Annuler",
-          name: "todoAlert"
+          text: "ajouter",
         },
-        {
-          text: "Supprimer"
-        }
-      ]
+        { text: "supprimer" },
+      ],
     });
+    addToDoAlert.present();
   }
-
-
 }
